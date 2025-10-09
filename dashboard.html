@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,600,400" rel="stylesheet" />
+<link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+
+<!-- Navbar -->
+<!-- Navbar Start -->
+<div class="container-fluid">
+  <div class="row bg-primary py-4">
+    <div class="col-md-12">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid bg-primary">
+          <a class="navbar-brand" href="#">
+            <img src="photos/logo.jpg" height="80px" width="80px" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#" data-bs-toggle="modal" data-bs-target="#homeModal">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#toolsModal">TOOLS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#loansModal">BUSINESS LOANS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#aboutModal">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#savingsModal">SAVINGS</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search">
+              <button class="btn btn-info" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+<!-- Navbar End -->
+
+<!-- Modals Start -->
+
+<!-- HOME Modal -->
+<div class="modal fade" id="homeModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Welcome to Our Web Banking System</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our web banking system provides secure, easy, and fast access to your account anytime, anywhere. You can check balances, make transactions, and manage your finances conveniently.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOOLS Modal -->
+<div class="modal fade" id="toolsModal" tabindex="-1">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Web Banking Tools & FAQ</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>We offer the following tools to make your banking experience easier:</p>
+        <ul>
+          <li>Account Information Viewer</li>
+          <li>Deposit & Withdraw Money</li>
+          <li>Transaction History</li>
+          <li>Balance Check</li>
+          <li>Calculator for quick financial calculations</li>
+        </ul>
+        <h6>Frequently Asked Questions</h6>
+        <div class="accordion" id="faqAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq1Header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                How do I check my account balance?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                You can check your balance instantly by clicking the "Balance Check" tool and entering your account details securely.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq2Header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                How can I deposit money online?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Use the "Deposit Money" tool to securely transfer funds to your account using online banking or linked payment methods.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faq3Header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                Can I view my transaction history?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Yes! Click on the "Transaction History" tool to get a complete record of your deposits, withdrawals, and other transactions.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BUSINESS LOANS Modal -->
+<div class="modal fade" id="loansModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Business Loans</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our banking system offers a variety of business loans with competitive interest rates and flexible repayment plans.  
+        You can apply online and track your loan application in real-time through our web portal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT US Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">About Our Bank</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>We are committed to providing secure and efficient web banking services for our customers. Our focus is on innovation, reliability, and excellent customer support.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SAVINGS Modal -->
+<div class="modal fade" id="savingsModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Savings Accounts</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Our savings accounts provide high interest rates, easy access, and online management features.  
+        Use our web tools to monitor your savings and plan your financial future efficiently.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modals End -->
+
+
+<!-- Carousel Slider -->
+<div class="container-fluid pt-2">
+  <div class="row">
+    <div class="col-12">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active"><img src="photos/s1.jpg" class="d-block w-100"></div>
+          <div class="carousel-item"><img src="photos/s2.jpg" class="d-block w-100"></div>
+          <div class="carousel-item"><img src="photos/s3.jpg" class="d-block w-100"></div>
+          <div class="carousel-item"><img src="photos/s4.jpg" class="d-block w-100"></div>
+          <div class="carousel-item"><img src="photos/s5.jpg" class="d-block w-100"></div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main Body -->
+<div class="container my-5 text-center">
+  <h2 class="main-heading mb-5">WEB BANKING SERVICES</h2>
+  <div class="boxes-container">
+    <div class="box box1" data-bs-toggle="modal" data-bs-target="#accountInfoModal">ACCOUNT INFORMATION</div>
+    <div class="box box2" data-bs-toggle="modal" data-bs-target="#depositModal">DEPOSIT MONEY</div>
+    <div class="box box3" data-bs-toggle="modal" data-bs-target="#withdrawModal">WITHDRAW MONEY</div>
+    <div class="box box4" data-bs-toggle="modal" data-bs-target="#calculatorModal">CALCULATOR</div>
+    <div class="box box5" data-bs-toggle="modal" data-bs-target="#balanceModal">BALANCE CHECK</div>
+    <div class="box box6" data-bs-toggle="modal" data-bs-target="#historyModal">TRANSACTION HISTORY</div>
+  </div>
+</div>
+
+<!-- Calculator Modal -->
+<div class="modal fade" id="calculatorModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content calculator-modal">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Calculator</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body p-3">
+        <div class="calculator-container text-center">
+          <input type="text" id="calc-display" class="calc-display" placeholder="0" disabled>
+          <div class="calc-buttons">
+            <button class="btn btn-calc">7</button>
+            <button class="btn btn-calc">8</button>
+            <button class="btn btn-calc">9</button>
+            <button class="btn btn-op">/</button>
+            <button class="btn btn-calc">4</button>
+            <button class="btn btn-calc">5</button>
+            <button class="btn btn-calc">6</button>
+            <button class="btn btn-op">*</button>
+            <button class="btn btn-calc">1</button>
+            <button class="btn btn-calc">2</button>
+            <button class="btn btn-calc">3</button>
+            <button class="btn btn-op">-</button>
+            <button class="btn btn-calc">0</button>
+            <button class="btn btn-calc">.</button>
+            <button class="btn btn-equal">=</button>
+            <button class="btn btn-op">+</button>
+            <button class="btn btn-clear">C</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Account Information Modal -->
+<div class="modal fade" id="accountInfoModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content account-info-modal balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Account Information</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="row g-3">
+          <div class="col-md-6"><strong>First Name:</strong> <span id="infoFirstName">N/A</span></div>
+          <div class="col-md-6"><strong>Last Name:</strong> <span id="infoLastName">N/A</span></div>
+          <div class="col-md-6"><strong>Date of Birth:</strong> <span id="infoDOB">N/A</span></div>
+          <div class="col-md-6"><strong>Gender:</strong> <span id="infoGender">N/A</span></div>
+          <div class="col-12"><strong>Address:</strong> <span id="infoAddress">N/A</span></div>
+          <div class="col-md-6"><strong>Bank Name:</strong> <span id="infoBankName">N/A</span></div>
+          <div class="col-md-6"><strong>Phone Number:</strong> <span id="infoPhone">N/A</span></div>
+          <div class="col-md-6"><strong>Account Type:</strong> <span id="infoAccountType">N/A</span></div>
+          <div class="col-md-6"><strong>Account Opening Date:</strong> <span id="infoAccountDate">N/A</span></div>
+          <div class="col-12"><strong>Email:</strong> <span id="infoEmail">N/A</span></div>
+          <div class="col-12"><strong>Account Number:</strong> <span id="infoAccNumber">N/A</span></div>
+          <div class="col-12"><strong>PIN Code:</strong> <span id="infoPin">N/A</span></div>
+          <div class="col-12"><strong>Balance:</strong> ₹<span id="infoBalance">0</span></div>
+        </div>
+      </div>
+      <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Deposit Modal -->
+<div class="modal fade" id="depositModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content deposit-modal balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Deposit Money</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label>Select Account Type</label>
+          <select id="depositAccType" class="form-select">
+            <option value="" disabled selected>Select account</option>
+            <option value="saving">Saving</option>
+            <option value="current">Current</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label>Bot Verification (1-100): <span id="botNumberDisplay"></span></label>
+          <input type="number" id="botInput" class="form-control" placeholder="Enter number">
+        </div>
+        <div class="mb-3">
+          <label>Amount to Deposit</label>
+          <input type="number" id="depositAmount" class="form-control" placeholder="Enter amount">
+        </div>
+        <div class="mb-3">
+          <label>Enter PIN Code:</label>
+          <input type="password" id="pinInput" class="form-control" placeholder="Enter your PIN">
+        </div>
+        <div class="mb-3">
+          <label>Enter Account Number:</label>
+          <input type="text" id="accNumberInput" class="form-control" placeholder="Enter Account Number">
+        </div>
+        <div class="mb-3">
+          <strong>Current Balance: ₹<span id="currentBalance">0</span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="depositBtn">Deposit</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Withdraw Modal -->
+<div class="modal fade" id="withdrawModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content deposit-modal balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Withdraw Money</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label>Enter PIN Code:</label>
+          <input type="password" id="withdrawPin" class="form-control" placeholder="Enter your PIN">
+        </div>
+        <div class="mb-3">
+          <label>Amount to Withdraw:</label>
+          <input type="number" id="withdrawAmount" class="form-control" placeholder="Enter amount">
+        </div>
+        <div class="mb-3">
+          <strong>Current Balance: ₹<span id="withdrawBalance">0</span></strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="withdrawBtn">Withdraw</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Balance Check Modal -->
+<div class="modal fade" id="balanceModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content deposit-modal balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Balance Check</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label>Enter PIN Code:</label>
+          <input type="password" id="balancePin" class="form-control" placeholder="Enter your PIN">
+        </div>
+        <div class="mb-3">
+          <strong>Your Balance: ₹<span id="showBalance">0</span></strong>
+        </div>
+      </div>
+      <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Transaction History Modal -->
+<div class="modal fade" id="historyModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content deposit-modal balancestyle">
+      <div class="modal-header">
+        <h5 class="modal-title">Transaction History</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <div class="mb-3">
+          <label>Enter PIN Code:</label>
+          <input type="password" id="historyPin" class="form-control" placeholder="Enter your PIN">
+        </div>
+        <table class="table table-striped mt-3 text-white">
+          <head>
+            <tr>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Date & Time</th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+      <div class="modal-footer"><button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="site-footer bg-dark text-white pt-5">
+  <div class="container">
+    <div class="row g-4">
+      <!-- Column 1: Logo & Description -->
+      <div class="col-12 col-md-4 text-center text-md-start">
+        <img src="photos/logo.jpg" height="60px" width="60px" alt="BOI Logo">
+        <p class="small mt-3">
+          Finance Banking Services — We provide secure, fast, and reliable banking solutions for all account holders.
+        </p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-6 col-md-4 text-center text-md-start">
+        <h6 class="text-uppercase fw-bold">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a class="footer-link text-white text-decoration-none" href="#">Personal Banking</a></li>
+          <li><a class="footer-link text-white text-decoration-none" href="#">NRI Services</a></li>
+          <li><a class="footer-link text-white text-decoration-none" href="#">Business Banking</a></li>
+          <li><a class="footer-link text-white text-decoration-none" href="#">Loans & Credit</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact & Social Media -->
+      <div class="col-6 col-md-4 text-center text-md-start">
+        <h6 class="text-uppercase fw-bold">Contact Us</h6>
+        <p class="small mb-2">Email: support@bankingsystem.com</p>
+        <p class="small mb-3">Phone: +91 12345 67890</p>
+        <div class="d-flex justify-content-center justify-content-md-start gap-3">
+          <a href="#" class="text-white fs-4"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-white fs-4"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3">
+      <small class="opacity-75">© <span id="currentYear"></span> Finance Banking System — All rights reserved.</small>
+      <small class="opacity-75 mt-2 mt-md-0">Designed by Manas Patidar</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Add this script to automatically update the year -->
+<script>
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// --- Account Info ---
+document.getElementById('accountInfoModal').addEventListener('show.bs.modal', function () {
+  document.getElementById('infoFirstName').textContent = localStorage.getItem('firstName') || 'N/A';
+  document.getElementById('infoLastName').textContent = localStorage.getItem('lastName') || 'N/A';
+  document.getElementById('infoDOB').textContent = localStorage.getItem('dob') || 'N/A';
+  document.getElementById('infoGender').textContent = localStorage.getItem('gender') || 'N/A';
+  document.getElementById('infoAddress').textContent = localStorage.getItem('address') || 'N/A';
+  document.getElementById('infoBankName').textContent = localStorage.getItem('bankName') || 'N/A';
+  document.getElementById('infoPhone').textContent = localStorage.getItem('accPhone') || 'N/A';
+  document.getElementById('infoAccountType').textContent = localStorage.getItem('accountType') || 'N/A';
+  document.getElementById('infoAccountDate').textContent = localStorage.getItem('accountOpeningDate') || 'N/A';
+  document.getElementById('infoEmail').textContent = localStorage.getItem('email') || 'N/A';
+  document.getElementById('infoAccNumber').textContent = localStorage.getItem('accNumber') || 'N/A';
+  document.getElementById('infoPin').textContent = localStorage.getItem('pinCode') || 'N/A';
+  document.getElementById('infoBalance').textContent = parseFloat(localStorage.getItem('accBalance')).toFixed(2) || 0;
+});
+
+// --- Deposit ---
+function generateBotNumber() { return Math.floor(Math.random() * 100) + 1; }
+let botNum = generateBotNumber();
+document.getElementById('botNumberDisplay').textContent = botNum;
+document.getElementById('depositModal').addEventListener('show.bs.modal', function () {
+    botNum = generateBotNumber();
+    document.getElementById('botNumberDisplay').textContent = botNum;
+    document.getElementById('depositAmount').value = '';
+    document.getElementById('botInput').value = '';
+    document.getElementById('pinInput').value = '';
+    document.getElementById('accNumberInput').value = '';
+    document.getElementById('currentBalance').textContent = parseFloat(localStorage.getItem('accBalance')).toFixed(2) || 0;
+});
+document.getElementById('depositBtn').addEventListener('click', function() {
+    const depositAmt = parseFloat(document.getElementById('depositAmount').value);
+    const botInput = parseInt(document.getElementById('botInput').value);
+    const pinInput = document.getElementById('pinInput').value;
+    const accInput = document.getElementById('accNumberInput').value;
+    const correctPin = localStorage.getItem('pinCode');
+    const accNumber = localStorage.getItem('accNumber');
+    if(botInput !== botNum) { alert('Bot verification failed!'); return; }
+    if(pinInput !== correctPin || accInput !== accNumber) { alert('Incorrect PIN or Account Number!'); return; }
+    if(depositAmt <= 0 || isNaN(depositAmt)) { alert('Enter valid amount!'); return; }
+    let balance = parseFloat(localStorage.getItem('accBalance')) || 0;
+    balance += depositAmt;
+    localStorage.setItem('accBalance', balance);
+    addTransaction('Deposit', depositAmt);
+    alert(`Deposit successful! New Balance: ₹${balance.toFixed(2)}`);
+    document.getElementById('currentBalance').textContent = balance.toFixed(2);
+});
+
+// --- Withdraw ---
+document.getElementById('withdrawModal').addEventListener('show.bs.modal', function () {
+    document.getElementById('withdrawAmount').value = '';
+    document.getElementById('withdrawPin').value = '';
+    document.getElementById('withdrawBalance').textContent = parseFloat(localStorage.getItem('accBalance')).toFixed(2) || 0;
+});
+document.getElementById('withdrawBtn').addEventListener('click', function() {
+    const amount = parseFloat(document.getElementById('withdrawAmount').value);
+    const pin = document.getElementById('withdrawPin').value;
+    const correctPin = localStorage.getItem('pinCode');
+    let balance = parseFloat(localStorage.getItem('accBalance')) || 0;
+    if(pin !== correctPin) { alert('Incorrect PIN!'); return; }
+    if(amount <= 0 || isNaN(amount)) { alert('Enter valid amount!'); return; }
+    if(amount > balance) { alert('Insufficient Balance!'); return; }
+    balance -= amount;
+    localStorage.setItem('accBalance', balance);
+    addTransaction('Withdraw', amount);
+    alert(`Withdraw successful! Remaining Balance: ₹${balance.toFixed(2)}`);
+    document.getElementById('withdrawBalance').textContent = balance.toFixed(2);
+});
+
+// --- Balance Check ---
+document.getElementById('balanceModal').addEventListener('show.bs.modal', function () {
+    document.getElementById('balancePin').value = '';
+    document.getElementById('showBalance').textContent = '0';
+});
+document.getElementById('balancePin').addEventListener('input', function() {
+    const pin = document.getElementById('balancePin').value;
+    const correctPin = localStorage.getItem('pinCode');
+    if(pin === correctPin){
+        const balance = parseFloat(localStorage.getItem('accBalance')).toFixed(2) || 0;
+        document.getElementById('showBalance').textContent = balance;
+    } else {
+        document.getElementById('showBalance').textContent = '0';
+    }
+});
+
+// --- Transaction History ---
+if(!localStorage.getItem('transactions')) localStorage.setItem('transactions', JSON.stringify([]));
+function addTransaction(type, amount){
+    const transactions = JSON.parse(localStorage.getItem('transactions'));
+    transactions.unshift({type, amount, date: new Date().toLocaleString()});
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+}
+document.getElementById('historyPin').addEventListener('input', function(){
+    const pin = document.getElementById('historyPin').value;
+    const correctPin = localStorage.getItem('pinCode');
+    const tbody = document.getElementById('historyBody');
+    tbody.innerHTML = '';
+    if(pin === correctPin){
+        const transactions = JSON.parse(localStorage.getItem('transactions'));
+        transactions.forEach(tx => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${tx.type}</td><td>₹${tx.amount}</td><td>${tx.date}</td>`;
+            tbody.appendChild(tr);
+        });
+    }
+});
+
+// --- Calculator ---
+const display = document.getElementById("calc-display");
+const buttons = document.querySelectorAll(".calc-buttons .btn-calc, .calc-buttons .btn-op, .calc-buttons .btn-equal, .calc-buttons .btn-clear");
+let currentInput = "";
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const value = btn.textContent;
+    if(value === "C") { currentInput = ""; display.value = "0"; }
+    else if(value === "=") { try { currentInput = eval(currentInput).toString(); display.value = currentInput; } catch { display.value = "Error"; currentInput = ""; } }
+    else { currentInput += value; display.value = currentInput; }
+  });
+});
+
+// --- Footer Year ---
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
