@@ -23,8 +23,9 @@ body {
 }
 
 .nav-link:hover {
-  color: #febf45 !important;
-  transform: scale(1.3);
+  color: lightgreen !important;
+  border-bottom: 2px solid darkgoldenrod;
+ 
 }
 
 .btn-login {
