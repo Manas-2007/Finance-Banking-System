@@ -146,13 +146,14 @@
       localStorage.setItem('bankName', bankName);
       localStorage.setItem('accPhone', phone);
       localStorage.setItem('accountType', accountType);
-      localStorage.setItem('accountOpeningDate', accountOpeningDate);
       localStorage.setItem('email', email);
       localStorage.setItem('city', city);
       localStorage.setItem('pinCodeCity', pinCodeCity);
       localStorage.setItem('pinCode', setPin);  // Save user-defined PIN
       localStorage.setItem('accNumber', Math.floor(1000000000 + Math.random() * 9000000000));
-      localStorage.setItem('accBalance', 0);
+     localStorage.setItem('balance', 0);
+     
+
 
       // Redirect to dashboard
       window.location.href = "dashboard.html";

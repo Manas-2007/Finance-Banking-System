@@ -253,9 +253,7 @@
           <div class="col-md-6"><strong>Gender:</strong> <span id="infoGender">N/A</span></div>
           <div class="col-12"><strong>Address:</strong> <span id="infoAddress">N/A</span></div>
           <div class="col-md-6"><strong>Bank Name:</strong> <span id="infoBankName">N/A</span></div>
-          <div class="col-md-6"><strong>Phone Number:</strong> <span id="infoPhone">N/A</span></div>
           <div class="col-md-6"><strong>Account Type:</strong> <span id="infoAccountType">N/A</span></div>
-          <div class="col-md-6"><strong>Account Opening Date:</strong> <span id="infoAccountDate">N/A</span></div>
           <div class="col-12"><strong>Email:</strong> <span id="infoEmail">N/A</span></div>
           <div class="col-12"><strong>Account Number:</strong> <span id="infoAccNumber">N/A</span></div>
           <div class="col-12"><strong>PIN Code:</strong> <span id="infoPin">N/A</span></div>
@@ -456,13 +454,22 @@ document.getElementById('withdrawBtn').addEventListener('click', function(){
     } else { alert('Invalid PIN or Account Number'); }
 });
 
+// ✅ Fix for wrong or preloaded balance value
+if (localStorage.getItem('balance') === null || isNaN(localStorage.getItem('balance'))) {
+    localStorage.setItem('balance', 0);
+} else {
+    localStorage.setItem('balance', Number(localStorage.getItem('balance')));
+}
+
 // --- Balance Check ---
 document.getElementById('balancePin').addEventListener('input', function(){
     const pin = document.getElementById('balancePin').value;
     const currentPin = localStorage.getItem('pinCode');
     if(pin === currentPin){
         document.getElementById('displayBalance').innerText = localStorage.getItem('balance') || 0;
-    } else { document.getElementById('displayBalance').innerText = 0; }
+    } else {
+        document.getElementById('displayBalance').innerText = 0;
+    }
 });
 
 // --- Calculator Logic ---
@@ -486,9 +493,7 @@ window.addEventListener('load', ()=>{
     document.getElementById('infoGender').innerText = localStorage.getItem('gender') || 'N/A';
     document.getElementById('infoAddress').innerText = localStorage.getItem('address') || 'N/A';
     document.getElementById('infoBankName').innerText = localStorage.getItem('bankName') || 'N/A';
-    document.getElementById('infoPhone').innerText = localStorage.getItem('phone') || 'N/A';
     document.getElementById('infoAccountType').innerText = localStorage.getItem('accountType') || 'N/A';
-    document.getElementById('infoAccountDate').innerText = localStorage.getItem('accountDate') || 'N/A';
     document.getElementById('infoEmail').innerText = localStorage.getItem('email') || 'N/A';
     document.getElementById('infoAccNumber').innerText = localStorage.getItem('accNumber') || 'N/A';
     document.getElementById('infoPin').innerText = localStorage.getItem('pinCode') || 'N/A';
