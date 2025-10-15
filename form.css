@@ -1,5 +1,5 @@
 body {
-  background-color: lightblue; /* Dark grey page background */
+  background-color: lightblue; 
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -9,7 +9,7 @@ h2 {
 }
 
 .account-form {
-  background: skyblue; /* darker blue toned down */
+  background: skyblue; 
   border-radius: 15px;
   max-width: 700px;
   color: #e1e8f3;
@@ -24,7 +24,7 @@ h2 {
 .account-form input,
 .account-form select,
 .account-form textarea {
-  background-color: #57799e; /* less bright blue */
+  background-color: #57799e; 
   color: #f0f4f8;
   border: none;
   font-weight: 600;
